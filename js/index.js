@@ -26,7 +26,6 @@ Never gonna run around and desert you
 Never gonna make you cry 
 Never gonna say goodbye 
 Never gonna…`.split(' ');
-console.log(never);
 window.onload = () => {
     document.querySelectorAll('h1, h2, h4, a, p, img').forEach(node => {
         let v = h = 0;
