@@ -85,27 +85,31 @@ document.querySelectorAll('*').forEach(node => {
 //affect bottom tags
 document.querySelectorAll('h1, h2, h4, nav, a, p, img').forEach(node => {
     //#5: click
-    node.onclick =  () => {
+    node.onclick =  (event) => {
         node.style.width = `${Math.random() * 2000}px`;
         node.style.height = `${Math.random() * 2000}px`;
+        event.stopPropagation();
     }
     //#6: double-click
-    node.ondblclick = () => {
+    node.ondblclick = (event) => {
         let html = document.querySelector('html');
         while(html.firstChild) html.removeChild(html.firstChild);
         html.textContent = "ALL YOUR DOM ARE BELONG TO US";
+        event.stopPropagation();
     }
     //#7: drag
-    node.ondrag = () => {
+    node.ondrag = (event) => {
         let height = node.offsetHeight;
         height++;
         node.style.height = `${height}px`;
+        event.stopPropagation();
     }
     //#8: wheel
-    node.onwheel = () => {
+    node.onwheel = (event) => {
         let height = node.offsetHeight;
         height--;
         node.style.height = `${height}px`
+        event.stopPropagation();
     }
 })
 
