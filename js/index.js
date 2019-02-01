@@ -112,6 +112,9 @@ document.querySelectorAll('h1, h2, h4, nav, a, p, img').forEach(node => {
         event.stopPropagation();
     }
 })
+document.querySelectorAll('a').forEach(node => {
+    node.preventDefault();
+})
 
 
 
