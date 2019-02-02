@@ -112,10 +112,5 @@ document.querySelectorAll('h1, h2, h4, nav, a, p, img').forEach(node => {
     }
 })
 document.querySelectorAll('a').forEach(node => {
-    node.preventDefault();
+    node.onclick(event) = () => event.preventDefault();
 })
-
-
-
-// document.querySelectorAll('p, a, h1, h2, h3, h4, img, button')
-//     .forEach(node => node.onmouseover = () => node.style.visibility = "hidden");
